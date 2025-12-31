@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scanned Image</title>
+    <style>
+        body {
+            text-align: center;
+            background: #f5f5f5;
+            font-family: Arial;
+        }
+        img {
+            max-width: 90%;
+            margin-top: 30px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Scanned Image</h2>
+
+<img src="myimage.jpg" alt="Image not found">
+
+</body>
+  <head>
+    <title>QR Code for Image</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: #f5f5f5;
+        }
+        #qrcode {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+  <body>
+
+<h2>Scan to View Image</h2>
+
+<div id="qrcode"></div>
+
+<script>
+    new QRCode(document.getElementById("qrcode"), {
+        text: "https://YOUR-IMAGE-LINK.jpg",
+        width: 250,
+        height: 250
+    });
+</script>
+
+  </body>
+</html>
